@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Services -->
-    <section class="services">
+    <div class="services">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-4">
@@ -52,5 +52,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 @endsection
