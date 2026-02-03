@@ -2,15 +2,23 @@
 
 @section('title', 'Products List')
 
+
+@section('archive_btn')
+    <a href="{{ route('products.index', ['archived' => $archived ? 0 : 1]) }}" class="btn btn-sm btn-outline-secondary">
+        {{ $archived ? 'Show Active' : 'Show Archived' }}
+    </a>
+@endsection
+
 @section('content')
 
     @if (session('editSuccess'))
         <div class="alert alert-success">{{ session('editSuccess') }}</div>
     @endif
 
-    @if (session('deleteSuccess'))
-        <div class="alert alert-success">{{ session('deleteSuccess') }}</div>
+    @if (session('ArchiveOrActiveSuccess'))
+        <div class="alert alert-success">{{ session('ArchiveOrActiveSuccess') }}</div>
     @endif
+
     <table class="table">
         <thead>
             <tr>
@@ -33,8 +41,9 @@
                             <form action="{{ route('products.destroy', ['product' => $product]) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-sm btn-danger mr-2"
-                                    onclick="return confirm('Are you sure you want to delete this product?')">Delete</button>
+                                <button type="submit"
+                                    class="btn btn-sm {{ $product->is_active ? "btn-warning" : "btn-success" }}  mr-2"
+                                    onclick="return confirm('Are you sure you want to {{ $product->is_active ? 'archive' : 'active' }} this product?')">{{ $product->is_active ? "Archive" : "Active" }}</button>
                             </form>
                         </td>
                     </tr>

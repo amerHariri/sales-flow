@@ -11,7 +11,8 @@
         <div id="main">
             <div class="inner">
                 @include('theme.partials.header')
-                <div style="width: 90%;margin:0 auto;">
+                <div style="width: 70%;margin:0 auto">
+                    @yield('archive_btn')
                     <h3 class="modal-title" style="margin: 15px 0;">@yield('title')</h3>
                     @yield('content')
                 </div>

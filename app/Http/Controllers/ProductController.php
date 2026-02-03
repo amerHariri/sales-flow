@@ -12,11 +12,17 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::latest()->paginate(9);
+        $archived = $request->boolean('archived'); // true لو archived=1
 
-        return view('products.index', compact('products'));
+        $products = Product::query()
+            ->where('is_active', !$archived)
+            ->latest()
+            ->paginate(15)
+            ->withQueryString();
+
+        return view('products.index', compact('products', 'archived'));
     }
 
     /**
@@ -72,8 +78,18 @@ class ProductController extends Controller
      */
     public function destroy(product $product)
     {
-        $product->delete();
+        if ($product->is_active) {
+            $product->update([
+                'is_active' => false,
+            ]);
 
-        return redirect()->route('products.index')->with('deleteSuccess', 'The Product has been deleted');
+            return redirect()->route('products.index', ['archived' => false])->with('ArchiveOrActiveSuccess', 'The Product has been archived');
+        } else {
+            $product->update([
+                'is_active' => true,
+            ]);
+
+            return redirect()->route('products.index', ['archived' => true])->with('ArchiveOrActiveSuccess', 'The Product has been active');
+        }
     }
 }

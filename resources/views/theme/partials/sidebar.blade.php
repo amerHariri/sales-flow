@@ -18,8 +18,8 @@
                 <li>
                     <span class="opener">Customers Operations</span>
                     <ul>
-                        <li><a href="#">Customers List</a></li>
-                        <li><a href="#">Add Customers</a></li>
+                        <li><a href="{{ route('customers.index') }}">Customers List</a></li>
+                        <li><a href="{{ route('customers.create') }}">Add Customers</a></li>
                     </ul>
                 </li>
 

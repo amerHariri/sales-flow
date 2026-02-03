@@ -4,24 +4,24 @@
 
 @section('content')
 
-    <form action="{{ route('products.update', ['product' => $product]) }}" method="POST">
+    <form action="{{ route('customers.update', ['customer' => $customer]) }}" method="POST">
         @csrf
         @method('PUT')
         <div class=" input-group mb-3">
             <span class="input-group-text">Product Name</span>
-            <input name="name" value="{{ $product->name }}" type="text" class="form-control" aria-label="name"
+            <input name="name" value="{{ $customer->name }}" type="text" class="form-control" aria-label="name"
                 aria-describedby="basic-addon1">
         </div>
 
         <div class="input-group mb-3">
-            <span class="input-group-text">Price</span>
-            <input name="price" value="{{ $product->price }}" type="text" class="form-control" aria-label="price"
+            <span class="input-group-text">Phone</span>
+            <input name="phone" value="{{ $customer->phone }}" type="text" class="form-control" aria-label="phone"
                 aria-describedby="basic-addon1">
         </div>
 
         <div class="input-group mb-3">
-            <span class="input-group-text">Stock</span>
-            <input name="stock" value="{{ $product->stock }}" type="text" class="form-control" aria-label="stock"
+            <span class="input-group-text">Email</span>
+            <input name="email" value="{{ $customer->email }}" type="text" class="form-control" aria-label="email"
                 aria-describedby="basic-addon1">
         </div>
 
