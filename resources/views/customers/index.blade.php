@@ -1,5 +1,5 @@
 @extends('theme.master')
-
+@section('main-title', 'Customers List')
 @section('title', 'Customers List')
 
 @section('archive_btn')

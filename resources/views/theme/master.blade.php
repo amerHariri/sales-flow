@@ -11,9 +11,10 @@
         <div id="main">
             <div class="inner">
                 @include('theme.partials.header')
-                <div style="width: 70%;margin:0 auto">
+                <div class="content">
                     @yield('archive_btn')
-                    <h3 class="modal-title" style="margin: 15px 0;">@yield('title')</h3>
+                    <h3 class="modal-title text-center" style="font-size:25px;margin: 15px 0 30px 0;">@yield('title')
+                    </h3>
                     @yield('content')
                 </div>
             </div>
@@ -24,6 +25,35 @@
     </div>
 
     @include('theme.partials.scripts')
+
+
+    <style>
+        .content {
+            margin: 0 auto;
+            padding: 0;
+            /* موبايل افتراضيًا */
+        }
+
+        @media (min-width: 768px) {
+            .content {
+                padding: 0 0rem;
+            }
+        }
+
+        /* form width responsive */
+
+        .content .form-responsive {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (min-width: 992px) {
+            .content .form-responsive {
+                width: 60%;
+            }
+        }
+    </style>
 </body>
 
 

@@ -64,8 +64,10 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateProductRequest $request, product $product)
+    public function update(UpdateProductRequest $request, Product $product)
     {
+        abort_unless($product->is_active, 403);
+
         $data = $request->validated();
 
         $product->update($data);

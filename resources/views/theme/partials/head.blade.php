@@ -6,7 +6,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-    <title>Ramayana - Free Bootstrap 4 CSS Template</title>
+    <title>Sales Flow - @yield('main-title')</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('assets') }}/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">

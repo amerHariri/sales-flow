@@ -10,8 +10,8 @@
                 <li>
                     <span class="opener">Sales Operations</span>
                     <ul>
-                        <li><a href="#">Sales List</a></li>
-                        <li><a href="#">Add Sale</a></li>
+                        <li><a href="{{ route('sales.index') }}">Sales List</a></li>
+                        <li><a href="{{ route('sales.create') }}">Add Sale</a></li>
                     </ul>
                 </li>
 

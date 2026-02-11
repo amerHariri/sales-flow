@@ -1,6 +1,6 @@
 @extends('theme.master')
-
-@section('title', 'Edit Product')
+@section('main-title', 'Edit Customer Information')
+@section('title', 'Edit Customer Information')
 
 @section('content')
 

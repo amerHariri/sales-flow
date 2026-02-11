@@ -58,7 +58,7 @@ class CustomerController extends Controller
      */
     public function edit(Customer $customer)
     {
-        return view('customers.edit');
+        return view('customers.edit', compact('customer'));
     }
 
     /**
@@ -66,6 +66,7 @@ class CustomerController extends Controller
      */
     public function update(UpdateCustomerRequest $request, Customer $customer)
     {
+        abort_unless($customer->is_active, 403);
         $data = $request->validated();
 
         $customer->update($data);

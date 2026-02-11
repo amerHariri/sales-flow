@@ -1357,3 +1357,44 @@ section.buttons .container-fluid {
     margin-top: 0;
     padding-top: 0;
 }
+
+#header .logout-btn{
+  background: transparent !important;
+  color: #fff !important;
+  padding: 8px 14px; /* اختياري */
+}
+
+#header .logout-btn:hover{
+  cursor: pointer;
+  background: transparent !important;
+  color: #fff !important;
+}
+
+#header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#header .logo {
+    text-align: center;
+}
+
+#header form {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+#main > .inner {
+    padding-top: 20px !important;
+}
+
+#header {
+    margin: -20px -100px 30px -100px !important;
+}
+
+
+

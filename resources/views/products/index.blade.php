@@ -1,5 +1,5 @@
 @extends('theme.master')
-
+@section('main-title', 'Products List')
 @section('title', 'Products List')
 
 
@@ -19,6 +19,7 @@
         <div class="alert alert-success">{{ session('ArchiveOrActiveSuccess') }}</div>
     @endif
 
+
     <table class="table">
         <thead>
             <tr>
@@ -35,7 +36,7 @@
                         <td>{{ $product->name }}</td>
                         <td>{{ $product->price }}</td>
                         <td>{{ $product->stock }}</td>
-                        <td style="display: flex;" width="20%">
+                        <td style="display: flex;">
                             <a href="{{ route('products.edit', ['product' => $product]) }}"
                                 class="btn btn-sm btn-primary mr-2">Edite</a>
                             <form action="{{ route('products.destroy', ['product' => $product]) }}" method="POST">
