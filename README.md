@@ -57,12 +57,12 @@ This project was developed as part of my journey toward becoming a professional 
 ## ⚙️ Installation
 
 Clone the repository:
-git clone https://github.com/amerHariri/sales-flow.git
-composer install
-cp .env.example .env
-php artisan key:generate
-php artisan migrate --seed
-php artisan serve
+- git clone https://github.com/amerHariri/sales-flow.git
+- composer install
+- cp .env.example .env
+- php artisan key:generate
+- php artisan migrate --seed
+- php artisan serve
 
 
 ## 🧠 Design Philosophy
