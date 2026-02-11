@@ -57,8 +57,6 @@ This project was developed as part of my journey toward becoming a professional 
 ## ⚙️ Installation
 
 Clone the repository:
-
-```bash
 git clone https://github.com/amerHariri/sales-flow.git
 composer install
 cp .env.example .env
