@@ -34,13 +34,13 @@ This project was developed as part of my journey toward becoming a professional 
 ## 🖼️ Screenshots
 
 ### 📷 Dashboard
-![Dashboard](public/readme/dashboard.png)
+![Dashboard](public/dashboard.png)
 
 ### 📷 Products
-![Products](public/readme/products.png)
+![Products](public/products.png)
 
 ### 📷 Sales
-![Sales](public/readme/sales.png)
+![Sales](public/sales.png)
 
 ---
 
